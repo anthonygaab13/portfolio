@@ -1,5 +1,6 @@
 import type { Dictionary } from "../types";
 import { contact } from "./contact";
+import { differentials } from "./differentials";
 import { education } from "./education";
 import { experience } from "./experience";
 import { profile } from "./profile";
@@ -13,6 +14,7 @@ const dictionary: Dictionary = {
   education,
   skills,
   languages,
+  differentials,
   projects,
 };
 

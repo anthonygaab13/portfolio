@@ -13,7 +13,7 @@ export async function Projects({ locale }: { locale: Locale }) {
 
   return (
     <SectionContainer id="projects">
-      <SectionHeading eyebrow="05" title={t.nav.projects} />
+      <SectionHeading eyebrow="06" title={t.nav.projects} />
       {dict.projects.length === 0 ? (
         <p className="text-sm text-muted-foreground">{emptyMessage}</p>
       ) : (
@@ -22,6 +22,7 @@ export async function Projects({ locale }: { locale: Locale }) {
             <ProjectCard
               key={project.slug}
               project={project}
+              featuredLabel={t.featured}
               viewRepoLabel={t.viewRepo}
               viewDemoLabel={t.viewDemo}
             />

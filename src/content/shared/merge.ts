@@ -38,6 +38,7 @@ export interface TranslatedProject {
   title: string;
   description: string;
   longDescription?: string;
+  highlights?: string[];
   imageAlt?: string;
   typeLabel: string;
 }
@@ -60,6 +61,7 @@ export function buildProjects(translated: TranslatedProject[]): Project[] {
       title: t.title,
       description: t.description,
       longDescription: t.longDescription,
+      highlights: t.highlights,
       imageAlt: t.imageAlt,
     };
   });

@@ -7,10 +7,12 @@ import type { Project } from "@/content/types";
 
 export function ProjectCard({
   project,
+  featuredLabel,
   viewRepoLabel,
   viewDemoLabel,
 }: {
   project: Project;
+  featuredLabel: string;
   viewRepoLabel: string;
   viewDemoLabel: string;
 }) {
@@ -27,6 +29,9 @@ export function ProjectCard({
         </div>
       )}
       <CardHeader>
+        {project.featured && (
+          <p className="font-mono text-xs tracking-wider text-primary uppercase">{featuredLabel}</p>
+        )}
         <div className="flex items-start justify-between gap-2">
           <CardTitle>{project.title}</CardTitle>
           {project.type && (
@@ -38,6 +43,18 @@ export function ProjectCard({
       </CardHeader>
       <CardContent>
         <p className="text-sm text-muted-foreground">{project.description}</p>
+        {project.highlights && project.highlights.length > 0 && (
+          <ul className="mt-3 grid gap-x-4 gap-y-1.5 text-sm text-muted-foreground sm:grid-cols-2">
+            {project.highlights.map((highlight, i) => (
+              <li key={i} className="flex gap-2">
+                <span className="text-primary" aria-hidden>
+                  ·
+                </span>
+                {highlight}
+              </li>
+            ))}
+          </ul>
+        )}
         <div className="mt-3 flex flex-wrap gap-1.5">
           {project.stack.map((tech) => (
             <Badge key={tech} variant="outline" className="font-mono text-xs">

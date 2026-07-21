@@ -41,6 +41,7 @@ export interface Project {
   title: string;
   description: string;
   longDescription?: string;
+  highlights?: string[];
   stack: string[];
   repoUrl?: string;
   demoUrl?: string;
@@ -55,10 +56,19 @@ export interface Profile {
   name: string;
   role: string;
   tagline: string;
+  headline: string;
+  motto: string;
+  focusAreas: string[];
   location: string;
   summary: string;
   avatarSrc: string;
   cvUrl: string;
+}
+
+export interface DifferentialItem {
+  id: string;
+  title: string;
+  description: string;
 }
 
 export interface Dictionary {
@@ -68,5 +78,6 @@ export interface Dictionary {
   education: EducationItem[];
   skills: SkillCategory[];
   languages: LanguageProficiency[];
+  differentials: DifferentialItem[];
   projects: Project[];
 }

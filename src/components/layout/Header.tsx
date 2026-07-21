@@ -11,6 +11,7 @@ export async function Header({ locale }: { locale: Locale }) {
     { href: "#about", label: t.nav.about },
     { href: "#experience", label: t.nav.experience },
     { href: "#skills", label: t.nav.skills },
+    { href: "#differentials", label: t.nav.differentials },
     { href: "#projects", label: t.nav.projects },
     { href: "#contact", label: t.nav.contact },
   ];

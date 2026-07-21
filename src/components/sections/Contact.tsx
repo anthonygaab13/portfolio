@@ -16,7 +16,7 @@ export async function Contact({ locale }: { locale: Locale }) {
 
   return (
     <SectionContainer id="contact">
-      <SectionHeading eyebrow="06" title={t.nav.contact} />
+      <SectionHeading eyebrow="07" title={t.nav.contact} />
       <p className="max-w-xl text-sm leading-relaxed text-muted-foreground">{description}</p>
 
       <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
