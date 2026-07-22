@@ -3,14 +3,6 @@ import type { ExperienceItem } from "../types";
 
 export const experience: ExperienceItem[] = buildExperience([
   {
-    id: "cnh-industrial",
-    role: "Mid-level Data Analyst (Independent Contractor)",
-    bullets: [
-      // Placeholder — replace with the actual responsibilities on the CNH Industrial project.
-      "Working independently as a data analyst providing services to CNH Industrial.",
-    ],
-  },
-  {
     id: "lotus-capital",
     role: "Mid-level Data Analyst",
     bullets: [

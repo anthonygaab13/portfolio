@@ -68,25 +68,22 @@ export async function Hero({ locale }: { locale: Locale }) {
         </div>
 
         <div className="flex flex-col items-center gap-4 md:items-end">
-          <div className="relative">
+          <div className="relative w-56 sm:w-64 md:w-72">
             <div
-              className="absolute -inset-4 -z-10 rounded-full bg-[radial-gradient(circle,color-mix(in_oklch,var(--primary)_25%,transparent),transparent_70%)]"
+              className="absolute -inset-6 -z-10 rounded-[2rem] bg-[radial-gradient(ellipse,color-mix(in_oklch,var(--primary)_20%,transparent),transparent_70%)]"
               aria-hidden
             />
-            <div className="size-48 overflow-hidden rounded-full border border-primary/30 bg-muted shadow-lg md:size-64">
+            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-border/60 bg-muted shadow-2xl">
               <Image
                 src={profile.avatarSrc}
                 alt={profile.name}
-                width={256}
-                height={256}
-                className="size-full object-cover"
+                fill
+                sizes="(min-width: 768px) 18rem, 14rem"
+                className="object-cover"
                 priority
               />
             </div>
           </div>
-          <p className="text-center font-mono text-xs tracking-wider text-muted-foreground uppercase md:text-right">
-            {profile.role}
-          </p>
           <div className="flex flex-wrap justify-center gap-1.5 md:justify-end">
             {profile.focusAreas.map((area) => (
               <Badge key={area} variant="secondary">

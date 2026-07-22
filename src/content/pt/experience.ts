@@ -3,14 +3,6 @@ import type { ExperienceItem } from "../types";
 
 export const experience: ExperienceItem[] = buildExperience([
   {
-    id: "cnh-industrial",
-    role: "Analista de Dados Pleno (Prestação de Serviço)",
-    bullets: [
-      // Placeholder — substituir pelas responsabilidades reais no projeto CNH Industrial.
-      "Atuação autônoma como analista de dados prestando serviço para a CNH Industrial.",
-    ],
-  },
-  {
     id: "lotus-capital",
     role: "Analista de Dados Pleno",
     bullets: [

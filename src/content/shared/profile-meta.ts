@@ -19,18 +19,12 @@ export interface ExperienceMeta {
 }
 
 export const experienceMeta: ExperienceMeta[] = [
-  {
-    id: "cnh-industrial",
-    company: "CNH Industrial",
-    startDate: "2026-07",
-    endDate: "present",
-    stack: [],
-  },
+  // Próxima posição (CNH Industrial ou Inter) entra aqui quando o contrato realmente começar.
   {
     id: "lotus-capital",
     company: "Lotus Capital",
     startDate: "2026-03",
-    endDate: "2026-07",
+    endDate: "present",
     stack: ["Microsoft Fabric", "Power BI", "DAX", "Python", "Flask", "SQL", "ETL", "Azure"],
   },
   {
