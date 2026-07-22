@@ -1,8 +1,7 @@
 // Dados não-traduzíveis: mesmos em qualquer idioma (links, datas, imagens, ordem).
 // Os arquivos content/pt e content/en importam isso e mesclam com o texto traduzido.
 
-// Placeholder — trocar por uma foto real em public/images/avatar.jpg (ou .png).
-export const avatarSrc = "/images/avatar.png";
+export const avatarSrc = "/images/avatar.jpg";
 
 export const contactBase = {
   email: "anthonygabrieleg09@gmail.com",
