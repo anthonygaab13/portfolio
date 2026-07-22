@@ -79,7 +79,7 @@ export async function Hero({ locale }: { locale: Locale }) {
                 alt={profile.name}
                 width={256}
                 height={256}
-                className="size-full object-cover object-[50%_20%]"
+                className="size-full object-cover"
                 priority
               />
             </div>
