@@ -68,17 +68,17 @@ export async function Hero({ locale }: { locale: Locale }) {
         </div>
 
         <div className="flex flex-col items-center gap-4 md:items-end">
-          <div className="relative w-56 sm:w-64 md:w-72">
+          <div className="relative w-48 sm:w-56 md:w-64">
             <div
-              className="absolute -inset-6 -z-10 rounded-[2rem] bg-[radial-gradient(ellipse,color-mix(in_oklch,var(--primary)_20%,transparent),transparent_70%)]"
+              className="absolute -inset-6 -z-10 rounded-full bg-[radial-gradient(circle,color-mix(in_oklch,var(--primary)_20%,transparent),transparent_70%)]"
               aria-hidden
             />
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-border/60 bg-muted shadow-2xl">
+            <div className="relative aspect-square w-full overflow-hidden rounded-full border border-border/60 bg-muted shadow-2xl">
               <Image
                 src={profile.avatarSrc}
                 alt={profile.name}
                 fill
-                sizes="(min-width: 768px) 18rem, 14rem"
+                sizes="(min-width: 768px) 16rem, 12rem"
                 className="object-cover"
                 priority
               />
