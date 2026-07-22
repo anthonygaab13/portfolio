@@ -1,5 +1,8 @@
 "use client";
 
+// Menu hambúrguer usado em telas pequenas (mobile) — abre um painel lateral (Sheet)
+// com os mesmos links de navegação do PillNav do desktop.
+
 import { useState } from "react";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";

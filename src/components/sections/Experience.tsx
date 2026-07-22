@@ -1,3 +1,7 @@
+// Seção "Experiência": timeline vertical com cada emprego (empresa, cargo, período, bullets, stack).
+// Não tem texto fixo pra editar aqui — tudo vem de dict.experience
+// (src/content/pt/experience.ts e src/content/en/experience.ts).
+
 import { Badge } from "@/components/ui/badge";
 import { SectionContainer } from "@/components/shared/SectionContainer";
 import { SectionHeading } from "@/components/shared/SectionHeading";
@@ -11,6 +15,7 @@ export async function Experience({ locale }: { locale: Locale }) {
 
   return (
     <SectionContainer id="experience">
+      {/* eyebrow="02" é só o numerozinho decorativo acima do título — segue a ordem das seções na página */}
       <SectionHeading eyebrow="02" title={t.nav.experience} />
       <Timeline>
         {dict.experience.map((item) => {

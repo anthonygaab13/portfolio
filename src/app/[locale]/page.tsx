@@ -1,3 +1,8 @@
+// Monta a página principal do site, juntando cada seção na ordem em que aparecem na tela.
+// Pra reordenar seções (ex: colocar Projetos antes de Skills), basta mudar a ordem aqui.
+// Pra adicionar uma seção nova, crie o componente em components/sections/ e importe/insira aqui.
+// Não tem texto pra editar neste arquivo — os textos ficam em src/content/pt e src/content/en.
+
 import { Separator } from "@/components/ui/separator";
 import { Hero } from "@/components/sections/Hero";
 import { Experience } from "@/components/sections/Experience";

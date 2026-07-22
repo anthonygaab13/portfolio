@@ -1,3 +1,5 @@
+// Ícone do LinkedIn desenhado à mão (SVG) — mesmo motivo do GithubIcon.tsx (não mexer).
+
 export function LinkedinIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden {...props}>

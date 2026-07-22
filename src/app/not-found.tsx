@@ -1,3 +1,7 @@
+// Página de erro 404 (quando alguém acessa uma URL que não existe no site).
+// É a única página que não passa pelo [locale], então o texto abaixo é fixo em português
+// (não tem versão em inglês). Pra mudar o texto do 404, edite direto aqui.
+
 import Link from "next/link";
 
 export default function NotFound() {

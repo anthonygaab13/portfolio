@@ -1,5 +1,9 @@
 "use client";
 
+// Navegação em formato de "pills" (abas arredondadas) no header, visível só em telas
+// md+ (o mobile usa MobileNav). Destaca automaticamente a seção que está visível na tela
+// enquanto o usuário rola a página, usando IntersectionObserver.
+
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
@@ -18,6 +22,8 @@ export function PillNav({ items }: { items: NavItem[] }) {
 
     if (sections.length === 0) return;
 
+    // "rootMargin" negativo faz o observer considerar a seção "ativa" quando ela ocupa
+    // a faixa central da tela (não só quando entra na borda) — evita trocar de aba cedo demais.
     const observer = new IntersectionObserver(
       (entries) => {
         const visible = entries

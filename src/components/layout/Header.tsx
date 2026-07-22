@@ -1,3 +1,6 @@
+// Cabeçalho fixo no topo (sticky): nome (link pro topo), navegação em pills, troca de
+// idioma/tema e o menu mobile. Os textos dos itens de menu vêm de ui.nav em src/lib/i18n.ts.
+
 import { getDictionary, getUi, type Locale } from "@/lib/i18n";
 import { LocaleSwitcher } from "./LocaleSwitcher";
 import { ThemeToggle } from "./ThemeToggle";
@@ -8,6 +11,8 @@ export async function Header({ locale }: { locale: Locale }) {
   const dict = await getDictionary(locale);
   const t = getUi(locale);
 
+  // Lista de âncoras do menu — cada "href" precisa bater com o id="..." da seção correspondente
+  // (definido em components/sections/*.tsx). Pra adicionar/remover item de menu, mexa aqui.
   const navItems = [
     { href: "#about", label: t.nav.about },
     { href: "#experience", label: t.nav.experience },

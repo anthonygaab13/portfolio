@@ -1,3 +1,8 @@
+// Seção "Hero": primeiro bloco visível ao abrir o site — foto, nome, cargo, frase de
+// impacto, resumo, lema e botões de ação (Ver projetos / GitHub / LinkedIn / Baixar CV).
+// Quase todo texto aqui vem de dict.profile (src/content/pt/profile.ts e content/en/profile.ts).
+// Foto: troque o arquivo public/images/avatar.jpg (caminho definido em shared/profile-meta.ts).
+
 import Image from "next/image";
 import { Download, MapPin } from "lucide-react";
 import { GithubIcon } from "@/components/icons/GithubIcon";
@@ -67,12 +72,16 @@ export async function Hero({ locale }: { locale: Locale }) {
           </div>
         </div>
 
+        {/* Foto de perfil circular + badges de área de foco (profile.focusAreas) */}
         <div className="flex flex-col items-center gap-4 md:items-end">
           <div className="relative w-48 sm:w-56 md:w-64">
+            {/* brilho suave atrás da foto — puramente decorativo */}
             <div
               className="absolute -inset-6 -z-10 rounded-full bg-[radial-gradient(circle,color-mix(in_oklch,var(--primary)_20%,transparent),transparent_70%)]"
               aria-hidden
             />
+            {/* rounded-full = circular. Se um dia quiser voltar pro formato retangular,
+                troque "rounded-full" por algo como "rounded-2xl" aqui e na div de cima. */}
             <div className="relative aspect-square w-full overflow-hidden rounded-full border border-border/60 bg-muted shadow-2xl">
               <Image
                 src={profile.avatarSrc}

@@ -1,3 +1,5 @@
+// Categorias de competências e idiomas, em inglês. Equivalente a content/pt/skills.ts.
+
 import type { LanguageProficiency, SkillCategory } from "../types";
 
 export const skills: SkillCategory[] = [

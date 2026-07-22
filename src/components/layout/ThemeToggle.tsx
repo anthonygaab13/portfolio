@@ -1,5 +1,7 @@
 "use client";
 
+// Botão (ícone de sol/lua) que alterna entre tema claro e escuro no header.
+
 import { useEffect, useState } from "react";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";

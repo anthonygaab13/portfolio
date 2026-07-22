@@ -1,3 +1,6 @@
+// Botão do header que leva pra versão em outro idioma da mesma página (ex: /pt -> /en).
+// O texto do botão ("English" / "Português") vem de ui.switchLocale em src/lib/i18n.ts.
+
 import Link from "next/link";
 import type { Locale } from "@/lib/i18n";
 

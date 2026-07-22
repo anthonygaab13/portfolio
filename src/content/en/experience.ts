@@ -1,8 +1,14 @@
+// Texto (cargo + bullets) de cada experiência, em inglês.
+// Empresa, datas e stack ficam em src/content/shared/profile-meta.ts (experienceMeta),
+// casadas pelo "id". Ao adicionar um emprego novo em pt/experience.ts, adicione aqui também
+// (mesmo id, texto em inglês).
+
 import { buildExperience } from "../shared/merge";
 import type { ExperienceItem } from "../types";
 
 export const experience: ExperienceItem[] = buildExperience([
   {
+    // Lotus Capital — posição atual
     id: "lotus-capital",
     role: "Mid-level Data Analyst",
     bullets: [
@@ -15,6 +21,7 @@ export const experience: ExperienceItem[] = buildExperience([
     ],
   },
   {
+    // Grupo Loyalty
     id: "grupo-loyalty",
     role: "Reports and Dashboard Analyst | Junior",
     bullets: [
@@ -25,6 +32,7 @@ export const experience: ExperienceItem[] = buildExperience([
     ],
   },
   {
+    // Sicoob Central Crediminas
     id: "sicoob",
     role: "Software Development Intern",
     bullets: [
@@ -35,6 +43,7 @@ export const experience: ExperienceItem[] = buildExperience([
     ],
   },
   {
+    // MRV&CO — Data & Analytics Assistant
     id: "mrv-data-analytics",
     role: "Data & Analytics Assistant",
     bullets: [
@@ -45,6 +54,7 @@ export const experience: ExperienceItem[] = buildExperience([
     ],
   },
   {
+    // MRV&CO — Process Assistant
     id: "mrv-process",
     role: "Process Assistant",
     bullets: [
@@ -54,6 +64,7 @@ export const experience: ExperienceItem[] = buildExperience([
     ],
   },
   {
+    // MRV&CO — General Office Assistant (sem bullets — primeira posição, sem destaques técnicos)
     id: "mrv-office",
     role: "General Office Assistant",
     bullets: [],

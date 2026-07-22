@@ -1,3 +1,7 @@
+// Seção "Formação": grid de cards com instituição, curso e período.
+// Título da seção vem de t.educationTitle (src/lib/i18n.ts). Os cards em si vêm de
+// dict.education (src/content/pt/education.ts e src/content/en/education.ts).
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { SectionContainer } from "@/components/shared/SectionContainer";
 import { SectionHeading } from "@/components/shared/SectionHeading";
@@ -7,11 +11,10 @@ import { formatPeriodDate } from "@/lib/utils";
 export async function Education({ locale }: { locale: Locale }) {
   const dict = await getDictionary(locale);
   const t = getUi(locale);
-  const title = locale === "pt" ? "Formação" : "Education";
 
   return (
     <SectionContainer id="education">
-      <SectionHeading eyebrow="03" title={title} />
+      <SectionHeading eyebrow="03" title={t.educationTitle} />
       <div className="grid gap-4 sm:grid-cols-2">
         {dict.education.map((item) => (
           <Card key={item.id}>

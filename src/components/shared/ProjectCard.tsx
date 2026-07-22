@@ -1,3 +1,8 @@
+// Card individual de projeto, usado dentro do grid da seção "Projetos".
+// Todo o conteúdo (título, descrição, stack, links, imagem) vem do objeto "project"
+// (definido em src/content/types.ts, preenchido em content/pt|en/projects.ts).
+// Projeto com featured=true ocupa 2 colunas no grid (fica maior/destacado).
+
 import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 import { GithubIcon } from "@/components/icons/GithubIcon";

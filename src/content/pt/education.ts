@@ -1,3 +1,7 @@
+// Texto (nome do curso + descrição opcional) de cada formação, em português.
+// Instituição e datas ficam em src/content/shared/profile-meta.ts (array educationMeta),
+// casadas pelo campo "id". Pra adicionar uma formação nova, crie a entrada lá primeiro.
+
 import { buildEducation } from "../shared/merge";
 import type { EducationItem } from "../types";
 

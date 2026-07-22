@@ -1,8 +1,15 @@
+// Texto (cargo + bullets) de cada experiência profissional, em português.
+// Empresa, datas e stack tecnológica NÃO ficam aqui — ficam em src/content/shared/profile-meta.ts
+// (array experienceMeta), casadas pelo campo "id". Pra adicionar um emprego novo, crie a entrada
+// lá primeiro e depois adicione o bloco correspondente aqui (mesmo id).
+// A ordem de exibição no site segue a ordem de experienceMeta, não a ordem daqui.
+
 import { buildExperience } from "../shared/merge";
 import type { ExperienceItem } from "../types";
 
 export const experience: ExperienceItem[] = buildExperience([
   {
+    // Lotus Capital — posição atual
     id: "lotus-capital",
     role: "Analista de Dados Pleno",
     bullets: [
@@ -15,6 +22,7 @@ export const experience: ExperienceItem[] = buildExperience([
     ],
   },
   {
+    // Grupo Loyalty
     id: "grupo-loyalty",
     role: "Analista de Relatórios e Dashboards | Júnior",
     bullets: [
@@ -25,6 +33,7 @@ export const experience: ExperienceItem[] = buildExperience([
     ],
   },
   {
+    // Sicoob Central Crediminas
     id: "sicoob",
     role: "Estagiário de Desenvolvimento de Software",
     bullets: [
@@ -35,6 +44,7 @@ export const experience: ExperienceItem[] = buildExperience([
     ],
   },
   {
+    // MRV&CO — Assistente de Dados e Analytics
     id: "mrv-data-analytics",
     role: "Assistente de Dados e Analytics",
     bullets: [
@@ -45,6 +55,7 @@ export const experience: ExperienceItem[] = buildExperience([
     ],
   },
   {
+    // MRV&CO — Assistente de Processos
     id: "mrv-process",
     role: "Assistente de Processos",
     bullets: [
@@ -54,6 +65,7 @@ export const experience: ExperienceItem[] = buildExperience([
     ],
   },
   {
+    // MRV&CO — Assistente Geral de Escritório (sem bullets — primeira posição, sem destaques técnicos)
     id: "mrv-office",
     role: "Assistente Geral de Escritório",
     bullets: [],

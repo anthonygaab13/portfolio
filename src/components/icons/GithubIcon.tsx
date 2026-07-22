@@ -1,3 +1,6 @@
+// Ícone do GitHub desenhado à mão (SVG), porque a versão atual do lucide-react
+// não traz mais ícones de marca (Github/Linkedin). Não precisa mexer aqui.
+
 export function GithubIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden {...props}>

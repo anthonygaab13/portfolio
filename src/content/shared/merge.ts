@@ -1,3 +1,10 @@
+// Funções que "colam" os dados fixos (profile-meta.ts) com o texto traduzido (pt/*.ts, en/*.ts),
+// casando cada item pelo id (ou slug, no caso de projetos).
+// Você normalmente não precisa mexer neste arquivo — ele só é usado dentro de
+// content/pt/experience.ts, content/pt/education.ts e content/pt/projects.ts (e os equivalentes em en/).
+// Se um id existir em profile-meta.ts mas faltar o texto traduzido correspondente, o build quebra
+// de propósito (throw), pra pegar o erro de "esqueci de traduzir" antes de ir pro ar.
+
 import { educationMeta, experienceMeta, projectsMeta } from "./profile-meta";
 import type { EducationItem, ExperienceItem, Project } from "../types";
 
@@ -40,7 +47,7 @@ export interface TranslatedProject {
   longDescription?: string;
   highlights?: string[];
   imageAlt?: string;
-  typeLabel: string;
+  typeLabel: string; // rótulo da categoria já traduzido, ex: "Pipeline de Dados" / "Data Pipeline"
 }
 
 export function buildProjects(translated: TranslatedProject[]): Project[] {

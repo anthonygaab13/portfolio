@@ -1,3 +1,5 @@
+// Cards da seção "Diferenciais", em inglês. Equivalente a content/pt/differentials.ts.
+
 import type { DifferentialItem } from "../types";
 
 export const differentials: DifferentialItem[] = [

@@ -1,3 +1,6 @@
+// Cards da seção "Diferenciais" (o que destaca o profissional), em português.
+// Pra adicionar um card novo, basta adicionar um objeto ao array abaixo (id único).
+
 import type { DifferentialItem } from "../types";
 
 export const differentials: DifferentialItem[] = [

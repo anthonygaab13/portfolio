@@ -1,3 +1,6 @@
+// Textos do Hero (topo do site) em inglês. Equivalente a content/pt/profile.ts, mas em EN.
+// Foto: veja avatarSrc em src/content/shared/profile-meta.ts (não aqui).
+
 import { avatarSrc } from "../shared/profile-meta";
 import type { Profile } from "../types";
 

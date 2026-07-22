@@ -1,3 +1,6 @@
+// Junta todos os blocos de conteúdo em inglês num único objeto (Dictionary).
+// Normalmente não precisa mexer aqui — só se você criar uma seção 100% nova no site.
+
 import type { Dictionary } from "../types";
 import { contact } from "./contact";
 import { differentials } from "./differentials";

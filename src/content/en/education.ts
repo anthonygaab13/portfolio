@@ -1,3 +1,6 @@
+// Texto (nome do curso) de cada formação, em inglês. Instituição e datas ficam em
+// src/content/shared/profile-meta.ts (educationMeta), casadas pelo "id".
+
 import { buildEducation } from "../shared/merge";
 import type { EducationItem } from "../types";
 

@@ -1,3 +1,7 @@
+// Layout que envolve TODAS as páginas de um idioma (/pt/* e /en/*): monta a tag <html>,
+// carrega as fontes, aplica o tema dark/light e coloca Header + Footer em volta do conteúdo.
+// Não tem texto pra editar aqui (título da aba do navegador vem do profile.name/role automaticamente).
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
@@ -18,10 +22,14 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// Gera as rotas /pt e /en em tempo de build (SSG), uma pra cada idioma suportado.
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
+// Título e descrição da aba do navegador / resultado de busca do Google.
+// Puxa automaticamente de profile.name/role/summary — não precisa editar aqui,
+// só em src/content/pt/profile.ts e src/content/en/profile.ts.
 export async function generateMetadata({
   params,
 }: {
@@ -59,6 +67,7 @@ export default async function LocaleLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full scroll-smooth antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
+        {/* defaultTheme="dark" = tema inicial do site. Trocar pra "light" se quiser começar claro. */}
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
           <TooltipProvider>
             <a

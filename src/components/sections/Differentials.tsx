@@ -1,3 +1,6 @@
+// Seção "Diferenciais": grid de cards curtos destacando pontos fortes do profissional.
+// Os cards vêm de dict.differentials (src/content/pt/differentials.ts e content/en/differentials.ts).
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { SectionContainer } from "@/components/shared/SectionContainer";
 import { SectionHeading } from "@/components/shared/SectionHeading";

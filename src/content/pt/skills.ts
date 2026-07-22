@@ -1,3 +1,8 @@
+// Categorias de competências (seção "Skills") e idiomas falados, em português.
+// Cada categoria vira um card com um título (label) e uma lista de badges (items).
+// Pra adicionar uma categoria nova, basta adicionar um objeto ao array "skills" abaixo
+// (o "id" só precisa ser único, não aparece no site).
+
 import type { LanguageProficiency, SkillCategory } from "../types";
 
 export const skills: SkillCategory[] = [
@@ -43,6 +48,7 @@ export const skills: SkillCategory[] = [
   },
 ];
 
+// Idiomas falados, exibidos junto da seção de Skills.
 export const languages: LanguageProficiency[] = [
   { language: "Português", level: "Nativo" },
   { language: "Inglês", level: "Intermediário" },

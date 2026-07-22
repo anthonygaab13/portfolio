@@ -1,3 +1,6 @@
+// Cabeçalho padrão de cada seção: numerozinho decorativo (eyebrow, ex: "01") + título grande.
+// Usado por todas as seções — o texto do título vem de cada seção individualmente.
+
 export function SectionHeading({
   eyebrow,
   title,

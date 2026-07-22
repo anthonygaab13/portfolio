@@ -1,3 +1,7 @@
+// Bloco "molde" usado por toda seção da página (Hero à parte): dá o espaçamento vertical
+// padrão e centraliza o conteúdo com a mesma largura máxima em todo o site.
+// Não tem texto aqui — é só estrutura/estilo.
+
 import { cn } from "@/lib/utils";
 
 export function SectionContainer({

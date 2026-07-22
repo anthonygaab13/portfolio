@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfólio — Anthony Gabriel
 
-## Getting Started
+Site pessoal (Next.js + Tailwind), bilíngue PT/EN, publicado na Vercel.
 
-First, run the development server:
+Este README existe pra você conseguir editar textos, foto e experiências **sem precisar mexer em lógica de componente** — só em arquivos de conteúdo simples. Todo o código-fonte também está comentado explicando o que cada arquivo faz.
+
+## Como rodar o site no seu computador
 
 ```bash
+npm install       # só na primeira vez, ou quando adicionar uma dependência nova
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) — o site recarrega sozinho a cada alteração salva.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Antes de publicar, sempre rode:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build   # garante que não quebrou nada
+npm run lint    # garante que o código está limpo
+```
 
-## Learn More
+## Onde editar cada coisa
 
-To learn more about Next.js, take a look at the following resources:
+Textos do site (bio, experiências, formação, skills, projetos etc.) ficam **separados** do código visual, em `src/content/`:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| O que você quer mudar | Onde mexer |
+| --- | --- |
+| Nome, cargo, frase de impacto, resumo, lema (Hero) | `src/content/pt/profile.ts` (e `src/content/en/profile.ts` pra versão em inglês) |
+| Email, telefone, LinkedIn, GitHub | `src/content/shared/profile-meta.ts` (campo `contactBase` — vale pros dois idiomas) |
+| Foto de perfil | Substitua o arquivo `public/images/avatar.jpg` (mesmo nome) |
+| Currículo em PDF | Coloque o arquivo em `public/cv/` com o nome referenciado em `cvUrl` (`profile.ts`) |
+| Experiências profissionais | Empresa/datas/stack em `src/content/shared/profile-meta.ts` (`experienceMeta`); cargo/bullets em `src/content/pt/experience.ts` e `src/content/en/experience.ts` |
+| Formação acadêmica | Instituição/datas em `profile-meta.ts` (`educationMeta`); curso em `src/content/pt/education.ts` e `en/education.ts` |
+| Competências (skills) e idiomas falados | `src/content/pt/skills.ts` e `src/content/en/skills.ts` |
+| Cards de "Diferenciais" | `src/content/pt/differentials.ts` e `src/content/en/differentials.ts` |
+| Projetos (seção "Projetos", hoje vazia) | Ver passo a passo dentro de `src/content/pt/projects.ts` |
+| Textos fixos de interface (menu, botões, "Atual", mensagens) | `src/lib/i18n.ts` (objeto `ui`) |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Cada um desses arquivos tem comentários no topo explicando exatamente o que ele controla e como adicionar itens novos (ex: um emprego novo, um projeto novo).
 
-## Deploy on Vercel
+**Regra geral:** todo texto/data/link não-visual está em `src/content/`. Os arquivos dentro de `src/components/` só decidem *como* esse conteúdo aparece na tela (cores, espaçamento, layout) — normalmente você não precisa entrar neles.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Exceção:** `src/components/ui/` são componentes gerados automaticamente pelo shadcn/ui (botão, card, badge etc.) — não são feitos pra editar na mão; se precisar mudar visual deles, é melhor pedir ajuda em vez de editar direto, pra não quebrar nada.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Português e inglês sempre em par
+
+Sempre que adicionar/mudar algo em `content/pt/algo.ts`, faça o mesmo em `content/en/algo.ts`. O site quebra no build se um "id" existir em um idioma e faltar no outro (isso é proposital — evita esquecer de traduzir).
+
+## Publicar as alterações
+
+```bash
+git add -A
+git commit -m "Descreve o que mudou"
+git push
+npx vercel --prod --yes
+```
+
+(O deploy automático via GitHub ainda não está conectado na Vercel — é sempre esse último comando que publica.)
+
+## Stack técnica
+
+Next.js 16 (App Router) · TypeScript · Tailwind CSS v4 · shadcn/ui · next-themes (dark/light) · i18n próprio (PT/EN, sem biblioteca externa).

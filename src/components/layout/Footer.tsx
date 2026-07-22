@@ -1,3 +1,7 @@
+// Rodapé do site: copyright + ícones de contato (email, LinkedIn, GitHub).
+// Os links vêm de dict.contact (src/content/pt|en/contact.ts) — não tem texto fixo aqui
+// além do "©", que é gerado automaticamente com o ano atual.
+
 import { Mail } from "lucide-react";
 import { GithubIcon } from "@/components/icons/GithubIcon";
 import { LinkedinIcon } from "@/components/icons/LinkedinIcon";
