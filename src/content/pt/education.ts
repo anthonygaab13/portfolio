@@ -10,4 +10,12 @@ export const education: EducationItem[] = buildEducation([
     id: "senai-ti",
     degree: "Técnico em TI",
   },
+  {
+    id: "fundacao-bradesco",
+    degree: "Tecnologia da Informação",
+  },
+  {
+    id: "senai-industria40",
+    degree: "Indústria 4.0",
+  },
 ]);
