@@ -12,7 +12,7 @@ export async function Hero({ locale }: { locale: Locale }) {
   const { profile, contact } = dict;
 
   return (
-    <section id="top" className="relative overflow-hidden">
+    <section id="about" className="relative scroll-mt-20 overflow-hidden">
       <div
         className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[36rem] bg-[radial-gradient(ellipse_60%_50%_at_50%_-10%,color-mix(in_oklch,var(--primary)_16%,transparent),transparent)]"
         aria-hidden
