@@ -15,7 +15,7 @@ export const experience: ExperienceItem[] = buildExperience([
     bullets: [
       "Desenvolvimento e manutenção de uma plataforma de analytics própria em Python (Flask), consumindo o Microsoft Fabric via SQL e renderizando dashboards interativos com indicadores de AuC, NNM, captação, churn, ativação de contas e NPS.",
       "Modelagem e estruturação de dados sobre o Microsoft Fabric em arquitetura medallion (ingestão → tratamento → consumo), padronizando regras de negócio de gestão de patrimônio.",
-      "Construção de dashboards estratégicos em Power BI (DAX) — incluindo modelos de Câmbio & Comissão, Banking e programas de aceleração comercial — com metas, atingimento YTD e scorecards executivos.",
+      "Construção de dashboards estratégicos em Power BI (DAX), incluindo modelos de Câmbio & Comissão, Banking e programas de aceleração comercial, com metas, atingimento YTD e scorecards executivos.",
       "Automação de pipelines e consultas em Python (pyodbc + autenticação Azure AD), com exportação automática de relatórios e envio de e-mails periódicos.",
       "Definição de regras de negócio e métricas críticas (churn líquido, captação externa vs. base, mix de produtos, cohort e ativação).",
       "Análises estratégicas de capacidade de infraestrutura (Microsoft Fabric / Azure) e avaliação de adoção de IA corporativa.",

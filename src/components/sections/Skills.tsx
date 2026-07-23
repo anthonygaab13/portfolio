@@ -36,7 +36,7 @@ export async function Skills({ locale }: { locale: Locale }) {
           {dict.languages.map((lang) => (
             <p key={lang.language} className="text-sm">
               <span className="font-medium">{lang.language}</span>{" "}
-              <span className="text-muted-foreground">— {lang.level}</span>
+              <span className="text-muted-foreground">· {lang.level}</span>
             </p>
           ))}
         </div>

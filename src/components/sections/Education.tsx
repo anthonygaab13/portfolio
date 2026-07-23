@@ -24,7 +24,7 @@ export async function Education({ locale }: { locale: Locale }) {
             </CardHeader>
             <CardContent>
               <p className="font-mono text-xs text-muted-foreground">
-                {formatPeriodDate(item.startDate, locale)} —{" "}
+                {formatPeriodDate(item.startDate, locale)} {t.periodSeparator}{" "}
                 {item.endDate === "present" ? t.present : formatPeriodDate(item.endDate, locale)}
               </p>
               {item.description && (

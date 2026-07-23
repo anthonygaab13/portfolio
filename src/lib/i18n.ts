@@ -38,6 +38,7 @@ export const ui = {
     viewRepo: "Repositório",
     viewDemo: "Ver demo",
     present: "Atual", // mostrado quando endDate === "present"
+    periodSeparator: "a", // conecta início e fim de um período (ex: "mar. de 2026 a Atual")
     featured: "Projeto principal",
     skipToContent: "Pular para o conteúdo", // link de acessibilidade, invisível a olho nu
     switchTheme: "Alternar tema",
@@ -45,7 +46,7 @@ export const ui = {
     educationTitle: "Formação", // título da seção de Formação (não tem item próprio no menu)
     languagesTitle: "Idiomas", // título da lista de idiomas, dentro da seção Skills
     contactDescription: "Aberto a novos projetos e oportunidades de dados. Chama no e-mail ou no LinkedIn.",
-    projectsEmpty: "Projetos em breve — em construção.", // mensagem exibida enquanto não há projetos cadastrados
+    projectsEmpty: "Projetos em breve: em construção.", // mensagem exibida enquanto não há projetos cadastrados
   },
   en: {
     nav: {
@@ -61,6 +62,7 @@ export const ui = {
     viewRepo: "Repository",
     viewDemo: "View demo",
     present: "Present",
+    periodSeparator: "to",
     featured: "Featured project",
     skipToContent: "Skip to content",
     switchTheme: "Toggle theme",
@@ -68,7 +70,7 @@ export const ui = {
     educationTitle: "Education",
     languagesTitle: "Languages",
     contactDescription: "Open to new data projects and opportunities. Reach out by email or LinkedIn.",
-    projectsEmpty: "Projects coming soon — under construction.",
+    projectsEmpty: "Projects coming soon: under construction.",
   },
 } as const;
 

@@ -14,7 +14,7 @@ export const experience: ExperienceItem[] = buildExperience([
     bullets: [
       "Built and maintained an in-house analytics platform in Python (Flask), consuming Microsoft Fabric via SQL and rendering interactive dashboards with AuC, NNM, acquisition, churn, account activation and NPS metrics.",
       "Modeled and structured data on Microsoft Fabric using medallion architecture (ingestion → processing → consumption), standardizing wealth management business rules.",
-      "Built strategic Power BI dashboards (DAX) — including FX & Commission, Banking and sales acceleration program models — with targets, YTD attainment and executive scorecards.",
+      "Built strategic Power BI dashboards (DAX), including FX & Commission, Banking and sales acceleration program models, with targets, YTD attainment and executive scorecards.",
       "Automated pipelines and queries in Python (pyodbc + Azure AD authentication), with automatic report exports and scheduled emails.",
       "Defined business rules and critical metrics (net churn, external vs. base acquisition, product mix, cohort and activation).",
       "Ran strategic infrastructure capacity analyses (Microsoft Fabric / Azure) and evaluated corporate AI adoption.",

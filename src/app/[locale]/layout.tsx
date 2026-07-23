@@ -40,7 +40,7 @@ export async function generateMetadata({
   const dict = await getDictionary(locale);
 
   return {
-    title: `${dict.profile.name} — ${dict.profile.role}`,
+    title: `${dict.profile.name} · ${dict.profile.role}`,
     description: dict.profile.summary,
     alternates: {
       languages: { pt: "/pt", en: "/en" },

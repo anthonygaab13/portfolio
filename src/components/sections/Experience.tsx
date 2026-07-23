@@ -19,7 +19,7 @@ export async function Experience({ locale }: { locale: Locale }) {
       <SectionHeading eyebrow="02" title={t.nav.experience} />
       <Timeline>
         {dict.experience.map((item) => {
-          const period = `${formatPeriodDate(item.startDate, locale)} — ${
+          const period = `${formatPeriodDate(item.startDate, locale)} ${t.periodSeparator} ${
             item.endDate === "present" ? t.present : formatPeriodDate(item.endDate, locale)
           }`;
           return (
