@@ -22,10 +22,7 @@ export async function Hero({ locale }: { locale: Locale }) {
         className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[36rem] bg-[radial-gradient(ellipse_60%_50%_at_50%_-10%,color-mix(in_oklch,var(--primary)_16%,transparent),transparent)]"
         aria-hidden
       />
-      {/* items-start (em vez de items-center) alinha a foto pelo topo, junto com o nome —
-          senão ela fica centralizada na altura do bloco de texto, que é mais alto, e
-          sobra um vão vazio em cima da foto. */}
-      <div className="mx-auto grid w-full max-w-4xl grid-cols-1 items-start gap-12 px-4 pt-16 pb-16 sm:px-6 md:grid-cols-[1.3fr_1fr] md:pt-24 md:pb-24 lg:px-8">
+      <div className="mx-auto grid w-full max-w-4xl grid-cols-1 items-center gap-12 px-4 pt-16 pb-16 sm:px-6 md:grid-cols-[1.3fr_1fr] md:pt-24 md:pb-24 lg:px-8">
         <div className="space-y-6">
           <Badge variant="outline" className="px-3 py-1 font-mono text-xs font-normal text-muted-foreground">
             <MapPin className="size-3" aria-hidden />
