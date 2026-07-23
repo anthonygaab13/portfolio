@@ -90,6 +90,10 @@ export async function Hero({ locale }: { locale: Locale }) {
                 sizes="(min-width: 768px) 16rem, 12rem"
                 className="object-cover"
                 priority
+                quality={95}
+                /* quality alta pq é uma foto pequena e única — o padrão do Next (75)
+                   recomprime a imagem em cima do arquivo já salvo e borra detalhes finos
+                   (cabelo, textura da pele) num avatar circular pequeno como esse. */
               />
             </div>
           </div>
