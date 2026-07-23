@@ -125,11 +125,17 @@ export interface ProjectMeta {
 }
 
 // Lista de projetos que aparecem na seção "Projetos" do site.
-// HOJE ESTÁ VAZIA DE PROPÓSITO — é o placeholder até os primeiros projetos de dados
-// serem publicados no GitHub. Pra adicionar um projeto:
+// Pra adicionar um projeto novo:
 //   1) cria um objeto aqui com slug único, stack, links, imagem etc.
 //   2) adiciona o texto traduzido (title, description, highlights...) em
 //      content/pt/projects.ts e content/en/projects.ts dentro do array do buildProjects([...]).
 export const projectsMeta: ProjectMeta[] = [
-  // Placeholder — substituir pelos projetos reais.
+  {
+    slug: "pipeline-indicadores-bcb",
+    stack: ["Python", "Polars", "DuckDB", "Delta Lake", "GitHub Actions"],
+    repoUrl: "https://github.com/anthonygaab13/pipeline-indicadores-bcb",
+    date: "2026-07",
+    featured: true,
+    type: "pipeline-dados",
+  },
 ];
