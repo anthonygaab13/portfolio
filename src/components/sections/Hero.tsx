@@ -81,9 +81,16 @@ export async function Hero({ locale }: { locale: Locale }) {
         {/* Foto de perfil circular + badges de área de foco (profile.focusAreas) */}
         <div className="flex flex-col items-center gap-4 md:items-end">
           <div className="relative w-48 sm:w-56 md:w-64">
-            {/* brilho suave atrás da foto — puramente decorativo, azul→violeta (mesma dupla do glow do hero) */}
+            {/* Brilho suave atrás da foto — azul→violeta, mesma dupla do glow do hero. Dois
+                círculos radiais sobrepostos em vez de um conic-gradient: o conic tinha um corte
+                de ângulo duro que, no tema claro, lia como mancha suja em vez de glow. Radial
+                degrade pra transparente em todas as direções, então funciona nos dois temas. */}
             <div
-              className="absolute -inset-6 -z-10 rounded-full bg-[conic-gradient(from_140deg,color-mix(in_oklch,var(--primary)_22%,transparent),color-mix(in_oklch,var(--accent-2)_18%,transparent),transparent_65%)]"
+              className="absolute -inset-6 -z-10 rounded-full bg-[radial-gradient(circle_at_32%_28%,color-mix(in_oklch,var(--primary)_24%,transparent),transparent_70%)]"
+              aria-hidden
+            />
+            <div
+              className="absolute -inset-6 -z-10 rounded-full bg-[radial-gradient(circle_at_72%_68%,color-mix(in_oklch,var(--accent-2)_18%,transparent),transparent_70%)]"
               aria-hidden
             />
             {/* rounded-full = circular. Se um dia quiser voltar pro formato retangular,

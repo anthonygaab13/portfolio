@@ -61,7 +61,11 @@
   /* Segundo tom do gradiente de acento (mesma família usada no dashboard BCB — ver seu
      globals.css) — só decorativo (glow, texto em gradiente), nunca cor de UI semântica. */
   --accent-2: oklch(0.58 0.16 296);
-  --secondary: oklch(0.97 0 0);
+  /* 0.97 (quase idêntico ao --background 1.0) fazia os badges "secondary" (Dados, BI,
+     Automação...) ficarem quase invisíveis no tema claro — sem borda e sem contraste
+     de fundo, viravam uma mancha em vez de um chip. Escurecido o suficiente pra ter
+     uma silhueta clara sem parecer pesado. */
+  --secondary: oklch(0.91 0 0);
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.48 0 0);
