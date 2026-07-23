@@ -78,8 +78,10 @@ export async function Hero({ locale }: { locale: Locale }) {
           </div>
         </div>
 
-        {/* Foto de perfil circular + badges de área de foco (profile.focusAreas) */}
-        <div className="flex flex-col items-center gap-4 md:items-end">
+        {/* Foto de perfil circular + badges de área de foco (profile.focusAreas). gap-8 (não
+            gap-4) de propósito: o glow -inset-6 atrás da foto "vaza" pra baixo, então precisa
+            de mais respiro aqui embaixo pra os badges não ficarem por cima do brilho. */}
+        <div className="flex flex-col items-center gap-8 md:items-end">
           <div className="relative w-48 sm:w-56 md:w-64">
             {/* Brilho suave atrás da foto — azul→violeta, mesma dupla do glow do hero. Dois
                 círculos radiais sobrepostos em vez de um conic-gradient: o conic tinha um corte
