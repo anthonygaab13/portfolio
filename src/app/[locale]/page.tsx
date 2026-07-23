@@ -4,6 +4,7 @@
 // Não tem texto pra editar neste arquivo — os textos ficam em src/content/pt e src/content/en.
 
 import { Separator } from "@/components/ui/separator";
+import { Reveal } from "@/components/shared/Reveal";
 import { Hero } from "@/components/sections/Hero";
 import { Experience } from "@/components/sections/Experience";
 import { Education } from "@/components/sections/Education";
@@ -27,17 +28,29 @@ export default async function LocalePage({
     <>
       <Hero locale={locale} />
       <Separator />
-      <Experience locale={locale} />
+      <Reveal>
+        <Experience locale={locale} />
+      </Reveal>
       <Separator />
-      <Education locale={locale} />
+      <Reveal>
+        <Education locale={locale} />
+      </Reveal>
       <Separator />
-      <Skills locale={locale} />
+      <Reveal>
+        <Skills locale={locale} />
+      </Reveal>
       <Separator />
-      <Differentials locale={locale} />
+      <Reveal>
+        <Differentials locale={locale} />
+      </Reveal>
       <Separator />
-      <Projects locale={locale} />
+      <Reveal>
+        <Projects locale={locale} />
+      </Reveal>
       <Separator />
-      <Contact locale={locale} />
+      <Reveal>
+        <Contact locale={locale} />
+      </Reveal>
     </>
   );
 }

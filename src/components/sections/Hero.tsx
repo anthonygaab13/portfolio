@@ -9,6 +9,7 @@ import { GithubIcon } from "@/components/icons/GithubIcon";
 import { LinkedinIcon } from "@/components/icons/LinkedinIcon";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Reveal } from "@/components/shared/Reveal";
 import { getDictionary, getUi, type Locale } from "@/lib/i18n";
 
 export async function Hero({ locale }: { locale: Locale }) {
@@ -29,7 +30,7 @@ export async function Hero({ locale }: { locale: Locale }) {
         aria-hidden
       />
       <div className="mx-auto grid w-full max-w-4xl grid-cols-1 items-center gap-12 px-4 pt-16 pb-16 sm:px-6 md:grid-cols-[1.3fr_1fr] md:pt-24 md:pb-24 lg:px-8">
-        <div className="space-y-6">
+        <Reveal className="space-y-6" y={14}>
           <Badge variant="outline" className="px-3 py-1 font-mono text-xs font-normal text-muted-foreground">
             <MapPin className="size-3" aria-hidden />
             {contact.location} · {profile.focusAreas.slice(0, 2).join(" & ")}
@@ -76,12 +77,12 @@ export async function Hero({ locale }: { locale: Locale }) {
               {t.downloadCv}
             </Button>
           </div>
-        </div>
+        </Reveal>
 
         {/* Foto de perfil circular + badges de área de foco (profile.focusAreas). gap-8 (não
             gap-4) de propósito: o glow -inset-6 atrás da foto "vaza" pra baixo, então precisa
             de mais respiro aqui embaixo pra os badges não ficarem por cima do brilho. */}
-        <div className="flex flex-col items-center gap-8 md:items-end">
+        <Reveal className="flex flex-col items-center gap-8 md:items-end" delay={0.15} y={14}>
           <div className="relative w-48 sm:w-56 md:w-64">
             {/* Brilho suave atrás da foto — azul→violeta, mesma dupla do glow do hero. Dois
                 círculos radiais sobrepostos em vez de um conic-gradient: o conic tinha um corte
@@ -119,7 +120,7 @@ export async function Hero({ locale }: { locale: Locale }) {
               </Badge>
             ))}
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
