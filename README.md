@@ -58,6 +58,14 @@ npx vercel --prod --yes
 
 (O deploy automático via GitHub ainda não está conectado na Vercel — é sempre esse último comando que publica.)
 
+O link oficial do site é **https://anthonygabriel.vercel.app**. Esse domínio não segue automaticamente os novos deploys — depois de publicar, rode:
+
+```bash
+npx vercel alias set <url-do-deployment-mostrada-no-passo-anterior> anthonygabriel.vercel.app
+```
+
+(a URL do deployment aparece na saída do comando `vercel --prod --yes` acima, no campo `"url"`).
+
 ## Stack técnica
 
 Next.js 16 (App Router) · TypeScript · Tailwind CSS v4 · shadcn/ui · next-themes (dark/light) · i18n próprio (PT/EN, sem biblioteca externa).
