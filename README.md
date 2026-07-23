@@ -1,5 +1,10 @@
 # Portfólio — Anthony Gabriel
 
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=nextdotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white)
+
 Site pessoal (Next.js + Tailwind), bilíngue PT/EN, publicado na Vercel.
 
 Este README existe pra você conseguir editar textos, foto e experiências **sem precisar mexer em lógica de componente** — só em arquivos de conteúdo simples. Todo o código-fonte também está comentado explicando o que cada arquivo faz.
