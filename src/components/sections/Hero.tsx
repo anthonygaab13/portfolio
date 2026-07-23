@@ -18,8 +18,14 @@ export async function Hero({ locale }: { locale: Locale }) {
 
   return (
     <section id="about" className="relative scroll-mt-20 overflow-hidden">
+      {/* Glow ambiente do hero — duas manchas (azul + violeta), mesma família do dashboard BCB,
+          só que bem mais contida: fica só atrás do hero, não a página toda. */}
       <div
-        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[36rem] bg-[radial-gradient(ellipse_60%_50%_at_50%_-10%,color-mix(in_oklch,var(--primary)_16%,transparent),transparent)]"
+        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[36rem] bg-[radial-gradient(ellipse_60%_50%_at_35%_-10%,color-mix(in_oklch,var(--primary)_16%,transparent),transparent)]"
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[36rem] bg-[radial-gradient(ellipse_45%_40%_at_80%_0%,color-mix(in_oklch,var(--accent-2)_12%,transparent),transparent)]"
         aria-hidden
       />
       <div className="mx-auto grid w-full max-w-4xl grid-cols-1 items-center gap-12 px-4 pt-16 pb-16 sm:px-6 md:grid-cols-[1.3fr_1fr] md:pt-24 md:pb-24 lg:px-8">
@@ -32,7 +38,7 @@ export async function Hero({ locale }: { locale: Locale }) {
           <div className="space-y-2">
             <h1 className="text-5xl font-bold tracking-tight md:text-7xl">{profile.name}</h1>
             <p className="text-lg font-medium text-foreground/90 md:text-xl">{profile.role}</p>
-            <p className="font-mono text-sm text-primary">{profile.tagline}</p>
+            <p className="text-gradient-accent font-mono text-sm font-medium">{profile.tagline}</p>
           </div>
 
           <p className="text-2xl leading-snug font-semibold tracking-tight text-balance md:text-4xl">
@@ -75,9 +81,9 @@ export async function Hero({ locale }: { locale: Locale }) {
         {/* Foto de perfil circular + badges de área de foco (profile.focusAreas) */}
         <div className="flex flex-col items-center gap-4 md:items-end">
           <div className="relative w-48 sm:w-56 md:w-64">
-            {/* brilho suave atrás da foto — puramente decorativo */}
+            {/* brilho suave atrás da foto — puramente decorativo, azul→violeta (mesma dupla do glow do hero) */}
             <div
-              className="absolute -inset-6 -z-10 rounded-full bg-[radial-gradient(circle,color-mix(in_oklch,var(--primary)_20%,transparent),transparent_70%)]"
+              className="absolute -inset-6 -z-10 rounded-full bg-[conic-gradient(from_140deg,color-mix(in_oklch,var(--primary)_22%,transparent),color-mix(in_oklch,var(--accent-2)_18%,transparent),transparent_65%)]"
               aria-hidden
             />
             {/* rounded-full = circular. Se um dia quiser voltar pro formato retangular,

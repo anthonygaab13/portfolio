@@ -24,6 +24,7 @@ export const projects: Project[] = buildProjects([
       "Testes automatizados e CI/CD",
       "Atualização semanal automática dos dados",
       "Dashboard visual em Next.js com gráficos próprios",
+      "Leituras automáticas, calculadora ao vivo e metodologia transparente",
     ],
     typeLabel: "Pipeline de Dados",
   },
