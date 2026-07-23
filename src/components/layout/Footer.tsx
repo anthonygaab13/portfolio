@@ -1,9 +1,10 @@
-// Rodapé do site: copyright + ícones de contato (email, LinkedIn, GitHub).
+// Rodapé do site: copyright + ícones de contato (email, LinkedIn, GitHub, Instagram).
 // Os links vêm de dict.contact (src/content/pt|en/contact.ts) — não tem texto fixo aqui
 // além do "©", que é gerado automaticamente com o ano atual.
 
 import { Mail } from "lucide-react";
 import { GithubIcon } from "@/components/icons/GithubIcon";
+import { InstagramIcon } from "@/components/icons/InstagramIcon";
 import { LinkedinIcon } from "@/components/icons/LinkedinIcon";
 import { getDictionary, type Locale } from "@/lib/i18n";
 
@@ -15,6 +16,7 @@ export async function Footer({ locale }: { locale: Locale }) {
     { href: `mailto:${dict.contact.email}`, label: "Email", icon: Mail },
     { href: dict.contact.linkedin, label: "LinkedIn", icon: LinkedinIcon },
     { href: dict.contact.github, label: "GitHub", icon: GithubIcon },
+    { href: dict.contact.instagram, label: "Instagram", icon: InstagramIcon },
   ];
 
   return (

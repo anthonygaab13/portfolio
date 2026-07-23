@@ -1,10 +1,12 @@
-// Seção "Contato": frase de abertura + botões de email, telefone, LinkedIn e GitHub.
+// Seção "Contato": frase de abertura + botões de email, WhatsApp, LinkedIn, GitHub e Instagram.
 // Frase vem de t.contactDescription (src/lib/i18n.ts). Links/telefone vêm de dict.contact
 // (src/content/pt/contact.ts e content/en/contact.ts, que puxam de shared/profile-meta.ts).
 
-import { Mail, Phone } from "lucide-react";
+import { Mail } from "lucide-react";
 import { GithubIcon } from "@/components/icons/GithubIcon";
+import { InstagramIcon } from "@/components/icons/InstagramIcon";
 import { LinkedinIcon } from "@/components/icons/LinkedinIcon";
+import { WhatsappIcon } from "@/components/icons/WhatsappIcon";
 import { Button } from "@/components/ui/button";
 import { SectionContainer } from "@/components/shared/SectionContainer";
 import { SectionHeading } from "@/components/shared/SectionHeading";
@@ -25,12 +27,19 @@ export async function Contact({ locale }: { locale: Locale }) {
           {dict.contact.email}
         </Button>
         {dict.contact.phone && (
+          // Clicar abre uma conversa no WhatsApp (wa.me exige só dígitos, sem "+", espaço ou traço).
           <Button
             variant="outline"
             nativeButton={false}
-            render={<a href={`tel:${dict.contact.phone.replace(/\s+/g, "")}`} />}
+            render={
+              <a
+                href={`https://wa.me/${dict.contact.phone.replace(/\D/g, "")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              />
+            }
           >
-            <Phone className="size-4" />
+            <WhatsappIcon className="size-4" />
             {dict.contact.phone}
           </Button>
         )}
@@ -49,6 +58,14 @@ export async function Contact({ locale }: { locale: Locale }) {
         >
           <GithubIcon className="size-4" />
           GitHub
+        </Button>
+        <Button
+          variant="outline"
+          nativeButton={false}
+          render={<a href={dict.contact.instagram} target="_blank" rel="noopener noreferrer" />}
+        >
+          <InstagramIcon className="size-4" />
+          Instagram
         </Button>
       </div>
     </SectionContainer>

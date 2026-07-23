@@ -14,9 +14,10 @@ export const avatarSrc = "/images/avatar.jpg";
 // Dados de contato compartilhados entre os dois idiomas (telefone e links não se traduzem).
 export const contactBase = {
   email: "anthonygabrieleg09@gmail.com",
-  phone: "+55 31 99708-3924",
+  phone: "+55 31 99708-3924", // usado também pro link do WhatsApp (o número é convertido automaticamente)
   linkedin: "https://www.linkedin.com/in/anthony-gabriel-3858631b9",
   github: "https://github.com/anthonygaab13",
+  instagram: "https://www.instagram.com/anthonygb.eu/",
 };
 
 export interface ExperienceMeta {

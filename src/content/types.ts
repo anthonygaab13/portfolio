@@ -6,9 +6,10 @@
 // Bloco de contato — usado no rodapé, na seção "Contato" e nos botões do Hero.
 export interface ContactInfo {
   email: string;
-  phone?: string; // "?" = opcional, pode deixar de fora se não tiver
+  phone?: string; // "?" = opcional, pode deixar de fora se não tiver. Usado também como número do WhatsApp.
   linkedin: string;
   github: string;
+  instagram: string;
   location: string;
 }
 
