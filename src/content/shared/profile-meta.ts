@@ -132,8 +132,9 @@ export interface ProjectMeta {
 export const projectsMeta: ProjectMeta[] = [
   {
     slug: "pipeline-indicadores-bcb",
-    stack: ["Python", "Polars", "DuckDB", "Delta Lake", "GitHub Actions"],
+    stack: ["Python", "Polars", "DuckDB", "Delta Lake", "GitHub Actions", "Next.js"],
     repoUrl: "https://github.com/anthonygaab13/pipeline-indicadores-bcb",
+    demoUrl: "https://indicadores-bcb.vercel.app",
     date: "2026-07",
     featured: true,
     type: "pipeline-dados",

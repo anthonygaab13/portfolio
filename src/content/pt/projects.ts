@@ -16,13 +16,14 @@ export const projects: Project[] = buildProjects([
     description:
       "Pipeline de dados em arquitetura medallion que extrai, limpa e agrega câmbio, Selic e IPCA a partir da API pública do Banco Central.",
     longDescription:
-      "Ingestão da API SGS do Banco Central (câmbio, Selic e IPCA), com camadas bronze (dado bruto), silver (limpeza, tipagem, deduplicação e validação) e gold (agregações de negócio via DuckDB: variação diária e médias móveis do câmbio, IPCA acumulado em 12 meses). Testes automatizados cobrindo cada camada e atualização semanal dos dados via GitHub Actions.",
+      "Ingestão da API SGS do Banco Central (câmbio, Selic e IPCA), com camadas bronze (dado bruto), silver (limpeza, tipagem, deduplicação e validação) e gold (agregações de negócio via DuckDB: variação diária e médias móveis do câmbio, IPCA acumulado em 12 meses). Testes automatizados cobrindo cada camada, atualização semanal dos dados via GitHub Actions e um dashboard em Next.js com gráficos construídos à mão pra visualizar tudo.",
     highlights: [
       "Arquitetura medallion (bronze/silver/gold)",
       "Delta Lake sem depender de Spark",
       "Agregações de negócio em SQL (DuckDB)",
       "Testes automatizados e CI/CD",
       "Atualização semanal automática dos dados",
+      "Dashboard visual em Next.js com gráficos próprios",
     ],
     typeLabel: "Pipeline de Dados",
   },
